@@ -6,7 +6,7 @@ const baseApiUrl = async () => {
 
 module.exports.config = {
   name: "bby",
-  aliases: ["baby", "bbe", "babe"],
+  aliases: ["baby", "Alya", "Hinata"],
   version: "6.9.0",
   author: "dipto",
   countDown: 0,
@@ -145,7 +145,7 @@ module.exports.onChat = async ({ api, event,message }) => {
     const body = event.body ? event.body.toLowerCase() : ""
     if(body.startsWith("baby") || body.startsWith("bby") || body.startsWith("janu")){
       const arr = body.replace(/^\S+\s*/, "")
-      if(!arr){ api.sendMessage("Present 💐", event.threadID, (error, info) => {
+      if(!arr){ api.sendMessage("bloo bby", event.threadID, (error, info) => {
       global.GoatBot.onReply.set(info.messageID, {
         commandName: this.config.name,
         type: "reply",
@@ -165,5 +165,5 @@ module.exports.onChat = async ({ api, event,message }) => {
     }, event.messageID);
     }
   }catch(err){
-      return api.sendMessage(`Error baby 🥺🥺`, event.threadID, event.messageID);
+      return api.sendMessage(``, event.threadID, event.messageID);
     }};
